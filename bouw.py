@@ -12,7 +12,7 @@ MENU = [
     ("zelf-aanschaffen.html", "Zelf kopen"),
     ("de-miskopen.html", "Miskopen"),
     ("aanbieders.html", "Aanbieders"),
-    ("artikelen/index.html", "Artikelen"),
+    ("artikelen.html", "Artikelen"),
 ]
 
 # derde volgorde in de reeks: geen van de zustersites hanteert deze
@@ -73,7 +73,7 @@ def pagina(bestand, titel, omschrijving, inhoud, diepte=0, extra_head="", extra_
 <title>{html.escape(titel)}</title>
 <meta name="description" content="{html.escape(omschrijving)}">
 <link rel="canonical" href="{canoniek}">
-<link rel="stylesheet" href="{op}blad/catalogus.css">
+<link rel="stylesheet" href="catalogus.css">
 {extra_head}
 </head>
 <body>
@@ -111,7 +111,7 @@ def pagina(bestand, titel, omschrijving, inhoud, diepte=0, extra_head="", extra_
         <a href="{op}zelf-aanschaffen.html">Zelf aanschaffen</a><br>
         <a href="{op}de-miskopen.html">Miskopen</a><br>
         <a href="{op}aanbieders.html">Aanbieders</a><br>
-        <a href="{op}artikelen/index.html">Artikelen</a></p>
+        <a href="artikelen.html">Artikelen</a></p>
       </div>
       <div>
         <h4>Aanbieders</h4>
@@ -226,10 +226,10 @@ home = f"""
       </div>
     </div>
     <div class="g-film">
-      <video autoplay muted loop playsinline preload="metadata" poster="beeld/gereedschap-loop.jpg"
+      <video autoplay muted loop playsinline preload="metadata" poster="gereedschap-loop.jpg"
              aria-label="Beelden van trainingen met banden, gewichten, een ophangsysteem en een balanstrainer">
-        <source src="beeld/gereedschap-loop.webm" type="video/webm">
-        <source src="beeld/gereedschap-loop.mp4" type="video/mp4">
+        <source src="gereedschap-loop.webm" type="video/webm">
+        <source src="gereedschap-loop.mp4" type="video/mp4">
       </video>
       <div class="g-film__band">materiaal in gebruik · buiten en aan huis</div>
     </div>
@@ -245,7 +245,7 @@ home = f"""
     </div>
     <div class="g-artikelen">
       <article class="g-artikel">
-        <img src="beeld/gewicht-tillen.jpg" alt="Vrouw tilt een gewicht op van het gras" loading="lazy">
+        <img src="gewicht-tillen.jpg" alt="Vrouw tilt een gewicht op van het gras" loading="lazy">
         <div class="g-artikel__kop"><span class="g-artikel__nr">01</span><h3 style="margin:0">verstelbaar gewicht</h3></div>
         <div class="g-artikel__body">
           <p>Eén set verstelbare halters of twee kettlebells vervangen een heel rek. Van twee kilo voor schouderwerk tot twintig voor benen, zonder dat er meer dan een halve vierkante meter in beslag wordt genomen.</p>
@@ -255,7 +255,7 @@ home = f"""
         </div>
       </article>
       <article class="g-artikel">
-        <img src="beeld/weerstandsband.jpg" alt="Weerstandsbanden liggen klaar op de grond" loading="lazy">
+        <img src="weerstandsband.jpg" alt="Weerstandsbanden liggen klaar op de grond" loading="lazy">
         <div class="g-artikel__kop"><span class="g-artikel__nr">02</span><h3 style="margin:0">weerstandsbanden</h3></div>
         <div class="g-artikel__body">
           <p>Vullen het gat dat gewichten thuis laten vallen: trekken. Zonder rek of kabelstation is een band aan een deurpost de enige manier om je rug echt aan het werk te krijgen.</p>
@@ -265,7 +265,7 @@ home = f"""
         </div>
       </article>
       <article class="g-artikel">
-        <img src="beeld/bal-boven-hoofd.jpg" alt="Vrouw traint op een mat met een bal boven het hoofd" loading="lazy">
+        <img src="bal-boven-hoofd.jpg" alt="Vrouw traint op een mat met een bal boven het hoofd" loading="lazy">
         <div class="g-artikel__kop"><span class="g-artikel__nr">03</span><h3 style="margin:0">een fatsoenlijke mat</h3></div>
         <div class="g-artikel__body">
           <p>De onopvallende held. Een mat van anderhalve centimeter maakt harde tegels bruikbaar, houdt gewichten van je laminaat en bepaalt of grondwerk wel of niet wordt overgeslagen.</p>
@@ -324,27 +324,27 @@ home = f"""
     </div>
     <div class="g-stukken">
       <article class="g-stuk">
-        <img src="beeld/ophangsysteem.jpg" alt="Ophangsysteem gespannen tussen bomen" loading="lazy">
+        <img src="ophangsysteem.jpg" alt="Ophangsysteem gespannen tussen bomen" loading="lazy">
         <div class="g-stuk__t">
-          <h3><a href="artikelen/banden-versus-gewichten.html">Banden of gewichten</a></h3>
+          <h3><a href="banden-versus-gewichten.html">Banden of gewichten</a></h3>
           <p>Wat een elastiek wel kan en een halter niet, en waarom de vergelijking meestal verkeerd wordt gemaakt.</p>
-          <a class="g-stuk__meer" href="artikelen/banden-versus-gewichten.html">Lezen →</a>
+          <a class="g-stuk__meer" href="banden-versus-gewichten.html">Lezen →</a>
         </div>
       </article>
       <article class="g-stuk">
-        <img src="beeld/balanstrainer.jpg" alt="Vrouw traint op een balanstrainer bij het water" loading="lazy">
+        <img src="balanstrainer.jpg" alt="Vrouw traint op een balanstrainer bij het water" loading="lazy">
         <div class="g-stuk__t">
-          <h3><a href="artikelen/hoe-lang-gaat-het-mee.html">Hoe lang gaat het mee</a></h3>
+          <h3><a href="hoe-lang-gaat-het-mee.html">Hoe lang gaat het mee</a></h3>
           <p>Levensduur per soort materiaal, en waaraan je ziet dat een band of mat vervangen moet worden.</p>
-          <a class="g-stuk__meer" href="artikelen/hoe-lang-gaat-het-mee.html">Lezen →</a>
+          <a class="g-stuk__meer" href="hoe-lang-gaat-het-mee.html">Lezen →</a>
         </div>
       </article>
       <article class="g-stuk">
-        <img src="beeld/rek-in-park.jpg" alt="Trainingsrek in een park met een mat ervoor" loading="lazy">
+        <img src="rek-in-park.jpg" alt="Trainingsrek in een park met een mat ervoor" loading="lazy">
         <div class="g-stuk__t">
-          <h3><a href="artikelen/zonder-iets-beginnen.html">Zonder iets beginnen</a></h3>
+          <h3><a href="zonder-iets-beginnen.html">Zonder iets beginnen</a></h3>
           <p>Zes weken trainen met alleen een stoel, een muur en een trap. Wanneer dat ophoudt te werken.</p>
-          <a class="g-stuk__meer" href="artikelen/zonder-iets-beginnen.html">Lezen →</a>
+          <a class="g-stuk__meer" href="zonder-iets-beginnen.html">Lezen →</a>
         </div>
       </article>
     </div>
@@ -555,7 +555,7 @@ aanbieders = f"""
 """
 
 ARTIKELEN = [
-    dict(bestand="artikelen/banden-versus-gewichten.html",
+    dict(bestand="banden-versus-gewichten.html",
          titel="Banden of gewichten",
          omschrijving="Wat een weerstandsband wel kan en een halter niet, en waarom die vergelijking meestal verkeerd wordt gemaakt.",
          beeld="ophangsysteem.jpg", alt="Ophangsysteem gespannen tussen bomen",
@@ -587,7 +587,7 @@ ARTIKELEN = [
 <h2>De praktische conclusie</h2>
 <p>Wie één ding koopt, koopt banden: goedkoop, klein, breed inzetbaar. Wie serieus sterker wil worden, komt er niet omheen om daarnaast gewicht in huis te halen. En wie met een trainer werkt, hoeft die keuze de eerste maanden helemaal niet te maken, want beide liggen in de auto.</p>
 """),
-    dict(bestand="artikelen/hoe-lang-gaat-het-mee.html",
+    dict(bestand="hoe-lang-gaat-het-mee.html",
          titel="Hoe lang gaat het mee",
          omschrijving="Levensduur per soort trainingsmateriaal, en waaraan je ziet dat een band, mat of ophangsysteem vervangen moet worden.",
          beeld="balanstrainer.jpg", alt="Vrouw traint op een balanstrainer",
@@ -621,7 +621,7 @@ ARTIKELEN = [
 <h2>Onderhoud kost vijf minuten per maand</h2>
 <p>Banden schoon en droog opbergen, uit de zon. Gewichten droog houden. Matten na het trainen afnemen, want zweet tast het oppervlak aan. Meer is er niet. Materiaal dat zo behandeld wordt, gaat langer mee dan je belangstelling ervoor.</p>
 """),
-    dict(bestand="artikelen/zonder-iets-beginnen.html",
+    dict(bestand="zonder-iets-beginnen.html",
          titel="Zonder iets beginnen",
          omschrijving="Zes weken trainen met alleen een stoel, een muur en een trap, en het punt waarop dat ophoudt te werken.",
          beeld="rek-in-park.jpg", alt="Trainingsrek in een park",
@@ -652,7 +652,7 @@ ARTIKELEN = [
 <h2>Waarom trainers hier zelf op sturen</h2>
 <p>Een trainer die in de eerste sessie een boodschappenlijst overhandigt, verkoopt spullen. Een trainer die begint met wat er staat, laat zien dat hij de omgeving kan lezen en dat hij het programma aanpast aan jou in plaats van aan zijn koffer. Dat is bovendien een goed teken voor de maanden erna.</p>
 """),
-    dict(bestand="artikelen/opbergen-en-opruimen.html",
+    dict(bestand="opbergen-en-opruimen.html",
          titel="Waar laat je het",
          omschrijving="Opbergen bepaalt of trainingsmateriaal gebruikt wordt of stof vangt. Vier oplossingen die in een gewoon huis werken.",
          beeld="studiovloer.jpg", alt="Trainingsvloer met gewichten en rek",
@@ -697,14 +697,14 @@ def artikel(a):
 </section>
 <section class="g-tekst">
   <div class="g-baan g-smal">
-    <img src="../beeld/{a['beeld']}" alt="{html.escape(a['alt'])}" style="border:3px solid #111310;margin-bottom:28px" loading="lazy">
+    <img src="{a['beeld']}" alt="{html.escape(a['alt'])}" style="border:3px solid #111310;margin-bottom:28px" loading="lazy">
     {a['inhoud']}
-    <p style="margin-top:2em"><a href="index.html">Terug naar alle artikelen</a></p>
+    <p style="margin-top:2em"><a href="artikelen.html">Terug naar alle artikelen</a></p>
   </div>
 </section>
 </main>
 """
-    return pagina(a["bestand"], a["titel"] + " | aanhuispersonaltrainer.nl", a["omschrijving"], inhoud, diepte=1)
+    return pagina(a["bestand"], a["titel"] + " | aanhuispersonaltrainer.nl", a["omschrijving"], inhoud, diepte=0)
 
 
 def artikelindex():
@@ -713,7 +713,7 @@ def artikelindex():
         naam = os.path.basename(a["bestand"])
         kaarten += f"""
       <article class="g-stuk">
-        <img src="../beeld/{a['beeld']}" alt="{html.escape(a['alt'])}" loading="lazy">
+        <img src="{a['beeld']}" alt="{html.escape(a['alt'])}" loading="lazy">
         <div class="g-stuk__t">
           <h3><a href="{naam}">{html.escape(a['titel'])}</a></h3>
           <p>{html.escape(a['omschrijving'])}</p>
@@ -732,9 +732,9 @@ def artikelindex():
 <section class="g-vak"><div class="g-baan"><div class="g-stukken">{kaarten}</div></div></section>
 </main>
 """
-    return pagina("artikelen/index.html", "Artikelen | aanhuispersonaltrainer.nl",
+    return pagina("artikelen.html", "Artikelen | aanhuispersonaltrainer.nl",
                   "Vier artikelen over trainingsmateriaal aan huis: banden of gewichten, levensduur, beginnen zonder iets en opbergen.",
-                  inhoud, diepte=1)
+                  inhoud, diepte=0)
 
 
 gemaakt = []
