@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """Bouwt aanhuispersonaltrainer.nl — invalshoek: materiaal en apparatuur."""
-import os, html
+import os, html, re
 
 BASIS = os.path.dirname(os.path.abspath(__file__))
 DOMEIN = "https://aanhuispersonaltrainer.nl"
@@ -64,7 +64,7 @@ def pagina(bestand, titel, omschrijving, inhoud, diepte=0, extra_head="", extra_
     for pad, label in MENU:
         actief = ' aria-current="page"' if pad == bestand else ""
         nav += f'<a href="{op}{pad}"{actief}>{html.escape(label)}</a>'
-    canoniek = DOMEIN + "/" + ("" if bestand == "index.html" else bestand)
+    canoniek = DOMEIN + "/" + ("" if bestand == "index.html" else bestand[:-5])
     doc = f"""<!DOCTYPE html>
 <html lang="nl">
 <head>
@@ -127,8 +127,12 @@ def pagina(bestand, titel, omschrijving, inhoud, diepte=0, extra_head="", extra_
 </body>
 </html>
 """
+    # interne verwijzingen zonder .html: Cloudflare Pages serveert die vorm en
+    # stuurt .html met een 308 door, wat anders elke klik een omweg geeft
+    doc = re.sub(r'href="([a-z0-9\-]+)\.html"',
+                 lambda m: 'href="/"' if m.group(1) == "index" else 'href="%s"' % m.group(1), doc)
     pad = os.path.join(BASIS, bestand)
-    os.makedirs(os.path.dirname(pad), exist_ok=True)
+    os.makedirs(os.path.dirname(pad) or ".", exist_ok=True)
     open(pad, "w", encoding="utf-8").write(doc)
     return bestand
 
@@ -755,7 +759,7 @@ for a in ARTIKELEN:
 
 open(os.path.join(BASIS, "robots.txt"), "w", encoding="utf-8").write(
     f"User-agent: *\nAllow: /\n\nSitemap: {DOMEIN}/sitemap.xml\n")
-urls = "".join(f"  <url><loc>{DOMEIN}/{'' if b=='index.html' else b}</loc></url>\n" for b in gemaakt)
+urls = "".join(f"  <url><loc>{DOMEIN}/{'' if b=='index.html' else b[:-5]}</loc></url>\n" for b in gemaakt)
 open(os.path.join(BASIS, "sitemap.xml"), "w", encoding="utf-8").write(
     f'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n{urls}</urlset>\n')
 
@@ -766,7 +770,7 @@ pagina("404.html", "Pagina niet gevonden | aanhuispersonaltrainer.nl", "Deze pag
     <span class="g-etiket">404</span>
     <h1>deze pagina ligt niet in de tas</h1>
     <p style="color:#33362e">Waarschijnlijk een oude verwijzing. Via de balk bovenaan kom je overal.</p>
-    <div class="g-knoppen" style="justify-content:center"><a class="g-knop" href="/index.html">Naar de startpagina</a></div>
+    <div class="g-knoppen" style="justify-content:center"><a class="g-knop" href="/">Naar de startpagina</a></div>
   </div>
 </section>
 </main>
