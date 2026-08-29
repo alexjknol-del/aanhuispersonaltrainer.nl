@@ -90,6 +90,14 @@ img{display:block;max-width:100%;height:auto}
 .g-vak--zwart{background:var(--zwart);color:#dcdcd2}
 .g-vak--zwart h2,.g-vak--zwart h3{color:var(--papier)}
 .g-vak--zwart a{color:var(--limoen)}
+/* witte kaarten binnen een zwarte sectie houden hun eigen kleuren */
+.g-vak--zwart .g-artikel h3,.g-vak--zwart .g-stuk h3{color:var(--zwart)}
+.g-vak--zwart .g-artikel p,.g-vak--zwart .g-artikel li,
+.g-vak--zwart .g-stuk p{color:#3a3d35}
+.g-vak--zwart .g-artikel a.g-knop,.g-vak--zwart .g-kiezer a.g-knop{color:var(--zwart)}
+.g-vak--zwart .g-kiezer h3{color:var(--zwart)}
+.g-vak--zwart .g-kiezer__kop h3{color:var(--papier)}
+.g-vak--zwart .g-kiezer p,.g-vak--zwart .g-kiezer li{color:#3a3d35}
 
 .g-titel{display:flex;align-items:baseline;gap:16px;margin-bottom:34px;flex-wrap:wrap}
 .g-titel__nr{

@@ -17,17 +17,17 @@ MENU = [
 
 # derde volgorde in de reeks: geen van de zustersites hanteert deze
 PARTIJEN = [
-    dict(naam="LET'S DO IT Personal Training", kleur="#c2a04b", url="https://letsdoitpt.nl/",
+    dict(naam="LET'S DO IT Personal Training", kleur="#c2a04b", nrtekst="#111310", url="https://letsdoitpt.nl/",
          punten=["Meer dan tachtig vrouwelijke trainsters, actief sinds 2007",
                  "Neemt het materiaal mee dat bij jouw programma hoort",
                  "Verdieping rond zwangerschap, herstel na de bevalling en overgang",
                  "Eigen app met bewegingsvideo's voor tussen de sessies"]),
-    dict(naam="YourHealth Personal Training", kleur="#ef7d1a", url="https://yourhealthpt.nl/",
+    dict(naam="YourHealth Personal Training", kleur="#ef7d1a", nrtekst="#111310", url="https://yourhealthpt.nl/",
          punten=["Ruim honderd trainers door heel Nederland",
                  "Strippenkaarten die je vooruit koopt, ruime geldigheid",
                  "Medical trainers voor wie met een blessure of aandoening traint",
                  "Ook boksen, waarvoor de trainer eigen handschoenen en pads meebrengt"]),
-    dict(naam="Jouw Personal Trainer aan Huis", kleur="#1e7a4e", url="https://www.jouwpersonaltraineraanhuis.nl/",
+    dict(naam="Jouw Personal Trainer aan Huis", kleur="#1e7a4e", nrtekst="#ffffff", url="https://www.jouwpersonaltraineraanhuis.nl/",
          punten=["Trainers met een achtergrond in fysiotherapie of leefstijlcoaching",
                  "Werkt veel met lichaamsgewicht, banden en lichte gewichten",
                  "Gericht op kracht, balans en mobiliteit, ook op latere leeftijd",
@@ -45,7 +45,7 @@ def blok_partijen(notities=None):
         uit.append(f"""
       <article class="g-artikel">
         <div class="g-artikel__kop">
-          <span class="g-artikel__nr" style="background:{p['kleur']};color:#111310">{i:02d}</span>
+          <span class="g-artikel__nr" style="background:{p['kleur']};color:{p['nrtekst']}">{i:02d}</span>
           <h3 style="margin:0">{html.escape(p['naam'])}</h3>
         </div>
         <div class="g-artikel__body">
