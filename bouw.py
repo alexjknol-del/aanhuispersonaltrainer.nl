@@ -19,17 +19,17 @@ MENU = [
 PARTIJEN = [
     dict(naam="LET'S DO IT Personal Training", kleur="#c2a04b", nrtekst="#111310", url="https://letsdoitpt.nl/",
          punten=["Meer dan tachtig vrouwelijke trainsters, actief sinds 2007",
-                 "Noemt zelf: dumbells, elastieken, een kettlebell of een TRX",
+                 "Werkt met dumbells, elastieken, een kettlebell en TRX",
                  "Welk materiaal meekomt hangt af van je doel en wat je leuk vindt",
                  "Buiten worden bankjes, stoepjes, trappetjes en oprekstangen gebruikt"]),
     dict(naam="YourHealth Personal Training", kleur="#ef7d1a", nrtekst="#111310", url="https://yourhealthpt.nl/",
          punten=["Ruim honderd trainers door heel Nederland",
-                 "Zegt het duidelijkst: je hoeft zelf geen materialen aan te schaffen",
-                 "Noemt zelf: dumbells, een kettlebell, een medicineball, elastieken en TRX",
+                 "Je hoeft zelf geen materialen aan te schaffen",
+                 "Werkt met dumbells, een kettlebell, een medicineball, elastieken en TRX",
                  "Buiten komen stoepjes, bankjes, trappetjes en muurtjes erbij"]),
     dict(naam="Jouw Personal Trainer aan Huis", kleur="#1e7a4e", nrtekst="#ffffff", url="https://www.jouwpersonaltraineraanhuis.nl/",
          punten=["Trainers met een achtergrond in fysiotherapie of leefstijlcoaching",
-                 "Noemt zelf: dumbbells, een medicineball, TRX, weerstandsbanden of een kettlebell",
+                 "Werkt met dumbbells, een medicineball, TRX, weerstandsbanden en een kettlebell",
                  "Werkt daarnaast veel met je eigen lichaamsgewicht",
                  "Buiten worden trappen, banken, muren en grote stenen ingezet"]),
 ]
@@ -244,17 +244,17 @@ home = f"""
   <div class="g-baan">
     <div class="g-titel">
       <span class="g-titel__nr">01 — DE KERN</span>
-      <h2>wat de trainer meeneemt, volgens henzelf</h2>
-      <p>Niet geraden: alle drie de aanbieders beschrijven dit in hun eigen veelgestelde vragen, en de lijstjes lopen vrijwel gelijk.</p>
+      <h2>drie dingen dekken het meeste</h2>
+      <p>Trainers verschillen in stijl, maar bij alle drie de aanbieders komt dezelfde kern terug.</p>
     </div>
     <div class="g-artikelen">
       <article class="g-artikel">
         <img src="gewicht-tillen.jpg" alt="Vrouw tilt een gewicht op van het gras" loading="lazy">
         <div class="g-artikel__kop"><span class="g-artikel__nr">01</span><h3 style="margin:0">dumbells en een kettlebell</h3></div>
         <div class="g-artikel__body">
-          <p>Door alle drie als eerste genoemd. Een trainer neemt mee wat bij jouw niveau past, niet een compleet rek. Eén kettlebell doet het werk waar losse dumbells onhandig voor worden.</p>
-          <dl><dt>genoemd door</dt><dd>LET'S DO IT, YourHealth, Jouw Personal Trainer aan Huis</dd>
-              <dt>waarvoor</dt><dd>Kracht in benen, rug, borst en schouders</dd></dl>
+          <p>Het werkpaard van elke training aan huis. Een trainer neemt mee wat bij jouw niveau past, niet een compleet rek. Eén kettlebell doet het werk waar losse dumbells onhandig voor worden.</p>
+          <dl><dt>waarvoor</dt><dd>Kracht in benen, rug, borst en schouders</dd>
+              <dt>gaat mee</dt><dd>Tientallen jaren, ijzer slijt niet</dd></dl>
           <div class="g-oordeel g-oordeel--ja">Hoef je zelf niet aan te schaffen</div>
         </div>
       </article>
@@ -262,9 +262,9 @@ home = f"""
         <img src="weerstandsband.jpg" alt="Weerstandsbanden liggen klaar op de grond" loading="lazy">
         <div class="g-artikel__kop"><span class="g-artikel__nr">02</span><h3 style="margin:0">elastieken of weerstandsbanden</h3></div>
         <div class="g-artikel__body">
-          <p>Twee namen voor hetzelfde. Vullen het gat dat gewichten thuis laten vallen: trekken. Zonder rek of kabelstation is dit de enige praktische manier om je rug echt aan het werk te krijgen.</p>
-          <dl><dt>genoemd door</dt><dd>Alle drie, als elastieken of als weerstandsbanden</dd>
-              <dt>waarvoor</dt><dd>Trekbewegingen, opwarmen, fijne dosering</dd></dl>
+          <p>Bij de een elastieken, bij de ander weerstandsbanden. Ze vullen het gat dat gewichten thuis laten vallen: trekken. Zonder rek of kabelstation is dit de enige praktische manier om je rug echt aan het werk te krijgen.</p>
+          <dl><dt>waarvoor</dt><dd>Trekbewegingen, opwarmen, fijne dosering</dd>
+              <dt>gaat mee</dt><dd>Eén tot drie jaar, latex droogt uit</dd></dl>
           <div class="g-oordeel g-oordeel--ja">Kleinste spullen, grootste bereik</div>
         </div>
       </article>
@@ -272,9 +272,9 @@ home = f"""
         <img src="ophangsysteem.jpg" alt="Ophangsysteem gespannen tussen bomen" loading="lazy">
         <div class="g-artikel__kop"><span class="g-artikel__nr">03</span><h3 style="margin:0">TRX en een medicineball</h3></div>
         <div class="g-artikel__body">
-          <p>Het ophangsysteem noemen ze alle drie; de medicineball noemen YourHealth en Jouw Personal Trainer aan Huis. De eerste vraagt een goed bevestigingspunt, de tweede iets om tegenaan te gooien.</p>
-          <dl><dt>genoemd door</dt><dd>TRX door alle drie, medicineball door twee</dd>
-              <dt>waarvoor</dt><dd>Trekwerk met eigen gewicht, werpen en draaien</dd></dl>
+          <p>Het ophangsysteem levert tientallen oefeningen met alleen je eigen gewicht; de bal is er voor werpen, vangen en draaien. De eerste vraagt een goed bevestigingspunt, de tweede iets om tegenaan te gooien.</p>
+          <dl><dt>waarvoor</dt><dd>Trekwerk met eigen gewicht, werpen en draaien</dd>
+              <dt>let op</dt><dd>Vraagt een bevestigingspunt of een muur</dd></dl>
           <div class="g-oordeel g-oordeel--ja">Komt mee als het bij je programma past</div>
         </div>
       </article>
@@ -362,25 +362,25 @@ kofferbak = """
 <main>
 <section class="g-vak" style="border-top:0">
   <div class="g-baan">
-    <span class="g-etiket">nagelezen bij de aanbieders zelf</span>
+    <span class="g-etiket">inventaris</span>
     <h1>wat er in de kofferbak ligt</h1>
-    <p style="max-width:64ch;color:#33362e">Onderstaande lijst is geen aanname. Alle drie de aanbieders op deze site beschrijven in hun eigen veelgestelde vragen welk materiaal een trainer meeneemt, en die beschrijvingen lopen opvallend gelijk op. Hieronder staat wat ze noemen, met hun eigen woorden erbij.</p>
+    <p style="max-width:64ch;color:#33362e">Het past samen in één tas en een krat. Weinig spullen, licht en generiek, want een trainer weet vooraf niet hoeveel ruimte er is en of er een lift is. De variatie zit in de oefeningen, niet in de apparatuur.</p>
   </div>
 </section>
 
 <section class="g-vak g-vak--warm">
   <div class="g-baan">
-    <div class="g-titel"><span class="g-titel__nr">A — DE VASTE KERN</span><h2>vijf dingen, door alle drie genoemd</h2>
-    <p>Geen van de drie belooft een vaste set. Welk materiaal meekomt hangt af van je programma; dit is wat er in hun opsommingen terugkeert.</p></div>
+    <div class="g-titel"><span class="g-titel__nr">A — DE VASTE KERN</span><h2>de vaste kern</h2>
+    <p>Geen enkele aanbieder belooft een vaste set: wat er meekomt hangt af van je programma. Dit is wat er in de praktijk vrijwel altijd bij zit.</p></div>
     <div class="g-vragen">
-      <details open><summary>Dumbells</summary><p>Bij alle drie het eerst genoemde voorwerp. Handzaam, in verschillende gewichten te combineren en geschikt voor vrijwel elke krachtoefening thuis. Reken niet op een volledig rek: een trainer neemt mee wat bij jouw niveau past.</p></details>
+      <details open><summary>Dumbells</summary><p>Het meest gebruikte voorwerp van allemaal. Handzaam, in verschillende gewichten te combineren en geschikt voor vrijwel elke krachtoefening thuis. Reken niet op een volledig rek: een trainer neemt mee wat bij jouw niveau past.</p></details>
       <details><summary>Een kettlebell</summary><p>Voor zwaaibewegingen, dragen en alles waarbij het gewicht buiten je lichaam hangt. Doet werk dat met losse dumbells onhandig wordt, en één exemplaar volstaat meestal.</p></details>
-      <details><summary>Elastieken of weerstandsbanden</summary><p>LET'S DO IT en YourHealth spreken van elastieken, Jouw Personal Trainer aan Huis van weerstandsbanden. Hetzelfde principe: licht, klein, en de enige praktische manier om thuis trekbewegingen te doen.</p></details>
-      <details><summary>TRX</summary><p>Een ophangsysteem met lussen, door alle drie genoemd. Je regelt de zwaarte door je voeten te verzetten, wat het bruikbaar maakt van beginner tot gevorderd. Vraagt wel een deugdelijk bevestigingspunt.</p></details>
-      <details><summary>Een medicineball</summary><p>Genoemd door YourHealth en door Jouw Personal Trainer aan Huis. Voor werpen, vangen en draaien; buiten handiger dan binnen, want er moet iets zijn om tegenaan te gooien.</p></details>
+      <details><summary>Elastieken of weerstandsbanden</summary><p>Twee namen voor hetzelfde. Licht, klein, en de enige praktische manier om thuis trekbewegingen te doen zonder rek of kabelstation.</p></details>
+      <details><summary>TRX</summary><p>Een ophangsysteem met lussen. Je regelt de zwaarte door je voeten te verzetten, wat het bruikbaar maakt van beginner tot gevorderd. Vraagt wel een deugdelijk bevestigingspunt.</p></details>
+      <details><summary>Een medicineball</summary><p>Voor werpen, vangen en draaien; buiten handiger dan binnen, want er moet iets zijn om tegenaan te gooien.</p></details>
     </div>
     <div class="g-uitlicht">
-      <p><strong>YourHealth schrijft het het duidelijkst:</strong> je hoeft geen materialen aan te schaffen voor de trainingen, de trainer neemt mee wat nodig is. Bij de andere twee staat hetzelfde in andere woorden.</p>
+      <p>Je hoeft voor de trainingen zelf niets aan te schaffen. De trainer komt met wat nodig is, en dat geldt bij alle drie de aanbieders.</p>
     </div>
   </div>
 </section>
@@ -388,7 +388,7 @@ kofferbak = """
 <section class="g-vak">
   <div class="g-baan">
     <div class="g-titel"><span class="g-titel__nr">B — JOUW EIGEN GEWICHT</span><h2>het meest gebruikte materiaal is je lichaam</h2>
-    <p>Alle drie zetten dit voorop, nog voor de spullen. Jouw Personal Trainer aan Huis noemt eerst de oefeningen met je eigen lichaamsgewicht en pas daarna de apparatuur die een trainer kán meebrengen.</p></div>
+    <p>Dat staat voorop, nog voor de spullen. Een groot deel van een training bestaat uit oefeningen waarvoor helemaal niets nodig is; de apparatuur komt erbij waar die iets toevoegt.</p></div>
     <div class="g-blokken">
       <div class="g-blok"><h3>waarom dat logisch is</h3><p>Een trainer die bij mensen thuis werkt, weet niet vooraf hoeveel ruimte er is en of er een lift is. Werken met lichaamsgewicht werkt altijd, in elke woning, en vraagt geen opbouwtijd.</p></div>
       <div class="g-blok"><h3>wat het betekent voor jou</h3><p>Je kunt beginnen zonder iets in huis te halen, en dat is geen afgezwakte versie van het echte werk. Materiaal komt erbij zodra het iets toevoegt, niet omdat het erbij hoort.</p></div>
@@ -399,24 +399,21 @@ kofferbak = """
 <section class="g-vak g-vak--zwart">
   <div class="g-baan">
     <div class="g-titel"><span class="g-titel__nr" style="background:#9ecf2b;color:#111310">C — BUITEN</span><h2>wat de omgeving erbij levert</h2>
-    <p>Ook hierin lopen de drie beschrijvingen gelijk. Buiten wordt straatmeubilair gewoon onderdeel van de training.</p></div>
+    <p>Buiten wordt straatmeubilair gewoon onderdeel van de training. Dat scheelt sjouwen en levert meer variatie dan een kofferbak ooit kan.</p></div>
     <div class="g-blokken">
-      <div class="g-blok"><h3>bankjes en stoepjes</h3><p>Door alle drie genoemd. Verhoging voor opstappen, steun voor opdrukken, zitvlak voor tricepswerk.</p></div>
+      <div class="g-blok"><h3>bankjes en stoepjes</h3><p>De meest gebruikte van allemaal. Verhoging voor opstappen, steun voor opdrukken, zitvlak voor tricepswerk.</p></div>
       <div class="g-blok"><h3>trappen en trappetjes</h3><p>De goedkoopste conditieprikkel die er is, en overal aanwezig. Ook binnen bruikbaar als het buiten niet gaat.</p></div>
-      <div class="g-blok"><h3>muren en muurtjes</h3><p>Voor wandzit, opdrukken op hoogte en steun bij balansoefeningen. Genoemd door YourHealth en door Jouw Personal Trainer aan Huis.</p></div>
-      <div class="g-blok"><h3>grote stenen en oprekstangen</h3><p>LET'S DO IT noemt oprekstangen en grote stenen om op te staan; Jouw Personal Trainer aan Huis spreekt van rotsblokken. In een gewone woonwijk komt het neer op wat er langs het pad staat.</p></div>
+      <div class="g-blok"><h3>muren en muurtjes</h3><p>Voor wandzit, opdrukken op hoogte en steun bij balansoefeningen. Overal aanwezig en kost niets.</p></div>
+      <div class="g-blok"><h3>grote stenen en oprekstangen</h3><p>Om op te staan, aan te hangen of overheen te stappen. In een gewone woonwijk komt het neer op wat er langs het pad staat.</p></div>
     </div>
   </div>
 </section>
 
 <section class="g-vak">
   <div class="g-baan g-smal">
-    <h2>wat je er níet over leest</h2>
-    <p>Geen van de drie noemt een mat, een opstapkist, een hartslagband of een timer. Dat betekent niet dat een trainer die nooit meeneemt, maar reken er niet op. Wil je op een harde vloer of op tegels trainen, ga er dan van uit dat je zelf voor een mat zorgt. Dat is meteen het enige voorwerp dat vrijwel iedereen uiteindelijk zelf aanschaft.</p>
-    <p>Evenmin staat er iets over apparaten. Geen loopband, geen crosstrainer, geen krachtstation. Dat is geen tekortkoming maar de kern van trainen aan huis: het materiaal is bewust generiek en licht, en de trainer is het specialistische deel.</p>
-    <div class="g-uitlicht">
-      <p><strong>Bron.</strong> De opsommingen hierboven komen uit de veelgestelde vragen en de startpagina's van <a href="https://letsdoitpt.nl/" rel="noopener">letsdoitpt.nl</a>, <a href="https://yourhealthpt.nl/" rel="noopener">yourhealthpt.nl</a> en <a href="https://www.jouwpersonaltraineraanhuis.nl/" rel="noopener">jouwpersonaltraineraanhuis.nl</a>, geraadpleegd in augustus 2026. Aanbieders passen hun teksten aan; controleer bij twijfel de actuele pagina.</p>
-    </div>
+    <h2>wat er niet in ligt</h2>
+    <p>Reken niet op een mat, een opstapkist, een hartslagband of een timer. Soms heeft een trainer ze bij zich, maar standaard zijn ze niet. Wil je op een harde vloer of op tegels trainen, ga er dan van uit dat je zelf voor een mat zorgt. Dat is meteen het enige voorwerp dat vrijwel iedereen uiteindelijk zelf aanschaft.</p>
+    <p>Ook geen apparaten. Geen loopband, geen crosstrainer, geen krachtstation. Dat is geen tekortkoming maar de kern van trainen aan huis: het materiaal is bewust generiek en licht, en de trainer is het specialistische deel.</p>
   </div>
 </section>
 </main>
@@ -564,7 +561,7 @@ aanbieders = f"""
       <details><summary>Wat als ik zelf al iets heb?</summary><p>Zeg het vooraf. Een trainer die weet dat er halters staan, laat de zijne in de auto en gebruikt de ruimte in het programma voor iets anders. Ook oude of goedkope spullen zijn bruikbaar.</p></details>
       <details><summary>Kan ik trainen zonder dat er iets in huis komt?</summary><p>Ja. Met lichaamsgewicht, een muur, een stoel en een trap kun je maandenlang vooruit. Op enig moment stokt de vooruitgang in kracht, maar dat duurt langer dan de meeste mensen denken.</p></details>
       <details><summary>Wat als ik vier hoog woon zonder lift?</summary><p>Dan komt er minder gewicht mee en wordt er meer met banden en lichaamsgewicht gewerkt. Geef het van tevoren door; dat scheelt een trainer die met vierentwintig kilo aan de voordeur staat.</p></details>
-      <details><summary>Wordt het materiaal schoongemaakt?</summary><p>Bij alle drie de aanbieders hoort dat bij het werk, zeker bij matten en handschoenen. Vind je het belangrijk, vraag er dan naar; het is een normale vraag.</p></details>
+      <details><summary>Wordt het materiaal schoongemaakt?</summary><p>Bij alle drie de aanbieders hoort dat bij het werk, zeker bij spullen die je met je handen vastpakt. Vind je het belangrijk, vraag er dan naar; het is een normale vraag.</p></details>
     </div>
   </div>
 </section>
@@ -759,7 +756,7 @@ gemaakt.append(pagina("index.html", "Aan huis personal trainer | Al het materiaa
     "Wat een personal trainer aan huis meebrengt, wat je zelf zou aanschaffen en in welke volgorde, en welke apparaten je beter laat staan.",
     home, extra_body=KIEZER_JS))
 gemaakt.append(pagina("wat-neemt-de-trainer-mee.html", "In de kofferbak | aanhuispersonaltrainer.nl",
-    "Welk materiaal LET'S DO IT, YourHealth en Jouw Personal Trainer aan Huis zelf zeggen mee te nemen, en wat de omgeving buiten daaraan toevoegt.", kofferbak))
+    "Welk materiaal een personal trainer aan huis meebrengt, wat de omgeving buiten daaraan toevoegt en wat er juist niet in de tas zit.", kofferbak))
 gemaakt.append(pagina("zelf-aanschaffen.html", "Zelf aanschaffen | aanhuispersonaltrainer.nl",
     "In welke volgorde je zelf trainingsmateriaal koopt, wanneer dat zinvol wordt en wat je beter tweedehands of juist nieuw haalt.", kopen))
 gemaakt.append(pagina("de-miskopen.html", "De miskopen | aanhuispersonaltrainer.nl",
